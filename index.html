@@ -3,9 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crap Portfolio</title>
+    <title>Cart Item</title>
+
+   <style>
+        body {
+    font-family: serif;
+    font-size: 20px;
+}
+.cart-container {
+    width: 85%;
+    margin: auto;
+}
+.section {
+    width: 80%;
+    height: 75px;
+    margin: 25px 10px;
+    text-transform: uppercase;
+}
+.cart-header,
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 10px 0;
+}
+.cart-header {
+    border-bottom: 1px solid #ccc;
+    font-weight:lighter;
+}
+
+.cart-header .item-title{
+    margin-left: 30%;
+} 
+
+.empti_cart{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.empti_cart p{
+    padding: 15px;
+    margin: 15px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.empti_cart button{
+    width: 300px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 15px;
+}
+.empti_cart button:hover{
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+.cart-header .item-price{
+    margin-left: 80px;
+} 
+
+.cart-item {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+}
+.item-info {
+    width: 500px;
+    display: flex;
+}
+.item-image {
+    width: 200px;
+    margin-right: 20px;
+}
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+.item-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+.item-stems {
+    color: #666;
+    font-size: 14px;
+}
+.edit-btn {
+    width: 50%;
+    margin-top: 30px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.quantity {
+    display: flex;
+    align-items:baseline;
+    border: 1px solid #666;
+    margin-bottom: 180px;
+}
+.quantity input{
+    padding: 3px 10px;
+    border: none;
+}
+.quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.quantity button:hover{
+    background-color: #c9c6c6;
+}
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+
+/* Basic styles */
+.containerr {
+width: 85%;
+margin: 0 ;
+}
+
+/* Subtotal and Price */
+
+/*.total-savings {
+color: #E57373;
+font-size: 1em;
+}
+*/
+.totale{
+display: flex;
+text-transform: uppercase;
+}
+.tot{
+margin-left: 80%;
+text-align: center;
+}
+
+.tttt{
+display: flex;
+
+} 
+
+.notes {
+display: flex;
+flex-direction: column;
+}
+
+/* Order Notes */
+.order-notes {
+width: 750px;
+height: 70px;
+margin-right: 10px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+
+/* Checkbox and Text */
+.checkbox-label {
+width: 750px;
+margin: 10px 0;
+font-size: 0.9em;
+color: #666;
+}
+
+.checkbox-label input {
+margin-right: 5px;
+}
+
+/* Terms and Conditions */
+.terms {
+font-size: 0.9em;
+color: #000;
+}
+.terms a {
+color: #E91E63;
+text-decoration: none;
+margin-left: 5px;
+}
+
+.check {
+width: 240px;
+margin-left: 100px;
+border-top: 2px solid black; /* Change the color and thickness as needed */
+padding-top: 15px;
+flex-direction: column;
+}
+
+.out {
+text-align: center;
+margin: 10px 0;  
+}
+
+/* Buttons */
+.button {
+width: 240px;
+padding: 15px 20px;
+margin: 10px 0;
+background-color: #E91E63;
+color: #fff;
+text-align: center;
+border: none;
+cursor: pointer;
+text-decoration: none;
+font-size: 1em;
+}
+
+.button:hover {
+background-color: #D81B60;
+}
+
+.continue-shopping {
+width: 240px;
+padding: 20px 20px;
+margin: 10px 0;
+background-color: white;
+border-top: 1px solid gray ;
+border-bottom: 1px solid gray;
+border-left: none;
+border-right: none;
+font-size: 0.9em;
+color: #E91E63;
+text-decoration: none;
+}
+
+.continue-shopping:hover {
+color: #C2185B;
+}
+
+    </style>  
 </head>
 <body>
-    
+    <div class="cart-container">
+        <div class="section clearfix"> 
+            <div class="sixteen columns"> 
+                <h1>Shopping Cart</h1> 
+                <div class="feature_divider"></div>
+            </div>
+        </div>
+        <div class="cart-header">
+                        <div class="item-title">ITEM</div>
+                        <div class="item-price">PRICE</div>
+                        <div class="item-qty">QTY</div>
+                        <div class="item-total">TOTAL</div>
+                    </div>
+
+            <div class="empti_cart">
+            <p>Your cart is empty.</p>
+            <a href="#"><button type="submit">Continue Shopping</button></a>
+            </div>
+   
+                            <div class="cart-item">
+                                <div class="item-info">
+                                    <img src="../images/cardimage1.webp" alt="Pink Paradise Tulip Bouquet" class="item-image">
+                                    <div class="item-details">
+                                        <div class="item-title">PINK PARADISE TULIP BOUQUET</div>
+                                        <div class="item-stems"></div>
+                                        <form action="../controllers/CartController1.php" method="post">
+                                        <button class="edit-btn" name="remove_item">REMOVE ITEM</button>
+                                        <input type="hidden" name="name" value="">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="item-price">$</div>
+                                
+                                <div class="quantity">
+                                <form action="../controllers/CartController1.php" method="post">
+                                    <button type="submit" name="update_quantity" >-</button>
+                                    <input type="number" id="qnt" name="quantity" value="" min="1">
+                                    <input type="hidden" name="name" value="">
+                                    <button type="submit" name="update_quantity_">+</button>
+                                </form>
+                                </div>
+                                <div class="item-total">$</div>
+                            </div>
+          
+                <div class="containerr">
+                    <form>
+                        <div  class="total">
+                            <div  class="totale">
+                                <h2>total</h2>
+                                <p class="tot"> $</p>
+                            </div>
+                                <p class="total-savings" style="display: none;">$10.00</p>
+                        </div>
+                        <div class="tttt">
+                            <div class="notes">
+                                <label for="order-notes">Order Notes:</label>
+                                <textarea id="order-notes" class="order-notes"></textarea>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    This text box is intended for reasonable dietary restrictions/concerns. Please note that we are unable to make special changes to the contents or appearance of a product, or accommodate specific delivery times, based on these special instructions.
+                                </label>
+                            </div>
+                            <div class="check">
+                                <div>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        I Agree with the Terms & Conditions <span class="terms"><a href="#">[View Terms]</a></span>
+                                    </label>
+                                </div>
+                            <div class="out"><a href="#" class="href"><button class="button">CHECKOUT</button></a></div> 
+                                <div class="outt"><a href="#"><button class="continue-shopping">CONTINUE SHOPPING</button></a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
 </body>
 </html>
